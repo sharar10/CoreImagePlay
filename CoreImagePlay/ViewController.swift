@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        playVideo()
+    }
 
+    private func playVideo() {
+        guard let path = Bundle.main.path(forResource: "720PVideo", ofType: "mp4") else {
+            fatalError()
+        }
+        let url = URL(fileURLWithPath: path)
+        let player = AVPlayer(url: url)
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.present(playerController, animated: true) {
+            player.play()
+        }
+    }
 }
 
