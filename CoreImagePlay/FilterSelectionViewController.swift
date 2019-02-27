@@ -29,7 +29,6 @@ class FilterSelectionViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //playVideo()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,19 +38,6 @@ class FilterSelectionViewController: UIViewController {
         switch segueName {
         case .filterPreview:
             return
-        }
-    }
-
-    private func playVideo() {
-        guard let path = Bundle.main.path(forResource: "720PVideo", ofType: "mp4") else {
-            fatalError()
-        }
-        let url = URL(fileURLWithPath: path)
-        let player = AVPlayer(url: url)
-        let playerController = AVPlayerViewController()
-        playerController.player = player
-        self.present(playerController, animated: true) {
-            player.play()
         }
     }
 }
