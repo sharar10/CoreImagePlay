@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
-		58DC2A5B2226F65A008DF52D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* ViewController.swift */; };
+		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
 		58DC2A602226F65B008DF52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5F2226F65B008DF52D /* Assets.xcassets */; };
 		58DC2A632226F65B008DF52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */; };
 		58DC2A6E2226F65B008DF52D /* CoreImagePlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */; };
+		58DC2A7A2226F74C008DF52D /* RGBAdjustmentFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A792226F74C008DF52D /* RGBAdjustmentFilter.swift */; };
+		58DC2A802226FB19008DF52D /* 720PVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A7F2226FB19008DF52D /* 720PVideo.mp4 */; };
+		58DC2A822226FD4A008DF52D /* OpacityFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A812226FD4A008DF52D /* OpacityFilter.swift */; };
+		58DC2A842226FD56008DF52D /* GrayscaleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A832226FD56008DF52D /* GrayscaleFilter.swift */; };
+		58DC2A862226FD65008DF52D /* CropFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A852226FD65008DF52D /* CropFilter.swift */; };
+		58DC2A882226FD71008DF52D /* SepiaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A872226FD71008DF52D /* SepiaFilter.swift */; };
+		58DC2A8A2226FD7A008DF52D /* VignetteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A892226FD7A008DF52D /* VignetteFilter.swift */; };
+		58DC2A8C2226FD85008DF52D /* SpecAmatorkaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */; };
+		58DC2A8E222702DD008DF52D /* FilterPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A8D222702DD008DF52D /* FilterPreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +37,7 @@
 /* Begin PBXFileReference section */
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58DC2A5A2226F65A008DF52D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
 		58DC2A5D2226F65A008DF52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58DC2A5F2226F65B008DF52D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DC2A622226F65B008DF52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +45,15 @@
 		58DC2A692226F65B008DF52D /* CoreImagePlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImagePlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImagePlayTests.swift; sourceTree = "<group>"; };
 		58DC2A6F2226F65B008DF52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58DC2A792226F74C008DF52D /* RGBAdjustmentFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAdjustmentFilter.swift; sourceTree = "<group>"; };
+		58DC2A7F2226FB19008DF52D /* 720PVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 720PVideo.mp4; sourceTree = "<group>"; };
+		58DC2A812226FD4A008DF52D /* OpacityFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityFilter.swift; sourceTree = "<group>"; };
+		58DC2A832226FD56008DF52D /* GrayscaleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscaleFilter.swift; sourceTree = "<group>"; };
+		58DC2A852226FD65008DF52D /* CropFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropFilter.swift; sourceTree = "<group>"; };
+		58DC2A872226FD71008DF52D /* SepiaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepiaFilter.swift; sourceTree = "<group>"; };
+		58DC2A892226FD7A008DF52D /* VignetteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignetteFilter.swift; sourceTree = "<group>"; };
+		58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecAmatorkaFilter.swift; sourceTree = "<group>"; };
+		58DC2A8D222702DD008DF52D /* FilterPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +95,15 @@
 		58DC2A572226F65A008DF52D /* CoreImagePlay */ = {
 			isa = PBXGroup;
 			children = (
+				58DC2A782226F737008DF52D /* CoreImageModels */,
 				58DC2A582226F65A008DF52D /* AppDelegate.swift */,
-				58DC2A5A2226F65A008DF52D /* ViewController.swift */,
+				58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */,
+				58DC2A8D222702DD008DF52D /* FilterPreviewViewController.swift */,
 				58DC2A5C2226F65A008DF52D /* Main.storyboard */,
 				58DC2A5F2226F65B008DF52D /* Assets.xcassets */,
 				58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */,
 				58DC2A642226F65B008DF52D /* Info.plist */,
+				58DC2A7E2226FB01008DF52D /* OtherAssets */,
 			);
 			path = CoreImagePlay;
 			sourceTree = "<group>";
@@ -94,6 +115,28 @@
 				58DC2A6F2226F65B008DF52D /* Info.plist */,
 			);
 			path = CoreImagePlayTests;
+			sourceTree = "<group>";
+		};
+		58DC2A782226F737008DF52D /* CoreImageModels */ = {
+			isa = PBXGroup;
+			children = (
+				58DC2A792226F74C008DF52D /* RGBAdjustmentFilter.swift */,
+				58DC2A812226FD4A008DF52D /* OpacityFilter.swift */,
+				58DC2A832226FD56008DF52D /* GrayscaleFilter.swift */,
+				58DC2A852226FD65008DF52D /* CropFilter.swift */,
+				58DC2A872226FD71008DF52D /* SepiaFilter.swift */,
+				58DC2A892226FD7A008DF52D /* VignetteFilter.swift */,
+				58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */,
+			);
+			path = CoreImageModels;
+			sourceTree = "<group>";
+		};
+		58DC2A7E2226FB01008DF52D /* OtherAssets */ = {
+			isa = PBXGroup;
+			children = (
+				58DC2A7F2226FB19008DF52D /* 720PVideo.mp4 */,
+			);
+			path = OtherAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DC2A802226FB19008DF52D /* 720PVideo.mp4 in Resources */,
 				58DC2A632226F65B008DF52D /* LaunchScreen.storyboard in Resources */,
 				58DC2A602226F65B008DF52D /* Assets.xcassets in Resources */,
 				58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */,
@@ -197,8 +241,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DC2A5B2226F65A008DF52D /* ViewController.swift in Sources */,
+				58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */,
+				58DC2A8E222702DD008DF52D /* FilterPreviewViewController.swift in Sources */,
+				58DC2A862226FD65008DF52D /* CropFilter.swift in Sources */,
+				58DC2A822226FD4A008DF52D /* OpacityFilter.swift in Sources */,
+				58DC2A8A2226FD7A008DF52D /* VignetteFilter.swift in Sources */,
+				58DC2A882226FD71008DF52D /* SepiaFilter.swift in Sources */,
+				58DC2A7A2226F74C008DF52D /* RGBAdjustmentFilter.swift in Sources */,
+				58DC2A842226FD56008DF52D /* GrayscaleFilter.swift in Sources */,
 				58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */,
+				58DC2A8C2226FD85008DF52D /* SpecAmatorkaFilter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
