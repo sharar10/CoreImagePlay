@@ -13,6 +13,7 @@
 		58DC2A602226F65B008DF52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5F2226F65B008DF52D /* Assets.xcassets */; };
 		58DC2A632226F65B008DF52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */; };
 		58DC2A6E2226F65B008DF52D /* CoreImagePlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */; };
+		58DC2A7A2226F74C008DF52D /* ImageFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A792226F74C008DF52D /* ImageFilters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		58DC2A692226F65B008DF52D /* CoreImagePlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImagePlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreImagePlayTests.swift; sourceTree = "<group>"; };
 		58DC2A6F2226F65B008DF52D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58DC2A792226F74C008DF52D /* ImageFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		58DC2A572226F65A008DF52D /* CoreImagePlay */ = {
 			isa = PBXGroup;
 			children = (
+				58DC2A782226F737008DF52D /* CoreImageModels */,
 				58DC2A582226F65A008DF52D /* AppDelegate.swift */,
 				58DC2A5A2226F65A008DF52D /* ViewController.swift */,
 				58DC2A5C2226F65A008DF52D /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				58DC2A6F2226F65B008DF52D /* Info.plist */,
 			);
 			path = CoreImagePlayTests;
+			sourceTree = "<group>";
+		};
+		58DC2A782226F737008DF52D /* CoreImageModels */ = {
+			isa = PBXGroup;
+			children = (
+				58DC2A792226F74C008DF52D /* ImageFilters.swift */,
+			);
+			path = CoreImageModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58DC2A5B2226F65A008DF52D /* ViewController.swift in Sources */,
+				58DC2A7A2226F74C008DF52D /* ImageFilters.swift in Sources */,
 				58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
