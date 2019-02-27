@@ -14,6 +14,11 @@ class FilterSelectionViewController: UIViewController {
     // MARK: stored properties
     let reuseIdentifier = "FilterNameCell"
 
+    // MARK: Nested types
+    private enum Segues: String {
+        case filterPreview
+    }
+
     // MARK: Interface builder outlets
     @IBOutlet weak var filtersTableView: UITableView!
 
@@ -25,6 +30,16 @@ class FilterSelectionViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //playVideo()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let segueName = Segues(rawValue: identifier) else {
+            fatalError()
+        }
+        switch segueName {
+        case .filterPreview:
+            return
+        }
     }
 
     private func playVideo() {
@@ -58,6 +73,8 @@ extension FilterSelectionViewController: UITableViewDataSource {
 
 // MARK: UITableViewDelegate methods
 extension FilterSelectionViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Segues.filterPreview.rawValue, sender: nil)
+    }
 }
 

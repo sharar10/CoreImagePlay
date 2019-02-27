@@ -21,6 +21,7 @@
 		58DC2A882226FD71008DF52D /* SepiaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A872226FD71008DF52D /* SepiaFilter.swift */; };
 		58DC2A8A2226FD7A008DF52D /* VignetteFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A892226FD7A008DF52D /* VignetteFilter.swift */; };
 		58DC2A8C2226FD85008DF52D /* SpecAmatorkaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */; };
+		58DC2A8E222702DD008DF52D /* FilterPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A8D222702DD008DF52D /* FilterPreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		58DC2A872226FD71008DF52D /* SepiaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepiaFilter.swift; sourceTree = "<group>"; };
 		58DC2A892226FD7A008DF52D /* VignetteFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VignetteFilter.swift; sourceTree = "<group>"; };
 		58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecAmatorkaFilter.swift; sourceTree = "<group>"; };
+		58DC2A8D222702DD008DF52D /* FilterPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				58DC2A782226F737008DF52D /* CoreImageModels */,
 				58DC2A582226F65A008DF52D /* AppDelegate.swift */,
 				58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */,
+				58DC2A8D222702DD008DF52D /* FilterPreviewViewController.swift */,
 				58DC2A5C2226F65A008DF52D /* Main.storyboard */,
 				58DC2A5F2226F65B008DF52D /* Assets.xcassets */,
 				58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */,
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */,
+				58DC2A8E222702DD008DF52D /* FilterPreviewViewController.swift in Sources */,
 				58DC2A862226FD65008DF52D /* CropFilter.swift in Sources */,
 				58DC2A822226FD4A008DF52D /* OpacityFilter.swift in Sources */,
 				58DC2A8A2226FD7A008DF52D /* VignetteFilter.swift in Sources */,
