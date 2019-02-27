@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import CoreImage
+
+//TODO: finish
+struct VignetteEffectFilter {
+    let filter: CIFilter?
+}

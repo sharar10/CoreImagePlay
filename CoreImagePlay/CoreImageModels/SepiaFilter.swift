@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import CoreImage
+
+struct SepiaFilter: Filter {
+    let filter: CIFilter?
+
+    init(initialIntensity: NSNumber) {
+        filter = CIFilter(name: FilterNames.sepia.rawValue)
+        filter?.setValue(initialIntensity, forKey: kCIInputIntensityKey)
+    }
+}
