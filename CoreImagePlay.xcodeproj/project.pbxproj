@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
-		58DC2A5B2226F65A008DF52D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* ViewController.swift */; };
+		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
 		58DC2A602226F65B008DF52D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5F2226F65B008DF52D /* Assets.xcassets */; };
 		58DC2A632226F65B008DF52D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58DC2A5A2226F65A008DF52D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
 		58DC2A5D2226F65A008DF52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58DC2A5F2226F65B008DF52D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DC2A622226F65B008DF52D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 			children = (
 				58DC2A782226F737008DF52D /* CoreImageModels */,
 				58DC2A582226F65A008DF52D /* AppDelegate.swift */,
-				58DC2A5A2226F65A008DF52D /* ViewController.swift */,
+				58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */,
 				58DC2A5C2226F65A008DF52D /* Main.storyboard */,
 				58DC2A5F2226F65B008DF52D /* Assets.xcassets */,
 				58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */,
@@ -238,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58DC2A5B2226F65A008DF52D /* ViewController.swift in Sources */,
+				58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */,
 				58DC2A862226FD65008DF52D /* CropFilter.swift in Sources */,
 				58DC2A822226FD4A008DF52D /* OpacityFilter.swift in Sources */,
 				58DC2A8A2226FD7A008DF52D /* VignetteFilter.swift in Sources */,
