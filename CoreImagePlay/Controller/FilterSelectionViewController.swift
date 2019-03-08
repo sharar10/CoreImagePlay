@@ -157,7 +157,9 @@ extension FilterSelectionViewController {
         case .rgbAdjustment:
             return RGBAdjustmentFilter(red: 0.5, green: 0.2, blue: 1.0) as Filter
         case .cropped:
-            return CroppedFilter() as Filter
+            let size = CGSize(width: 1280, height: 720)
+            return CroppedFilter(imageSize: size, cropRelativeOrigin: (x: 0.2, y: 0.1), cropRelativeSize: (width: 0.8, height: 0.8))
+                as Filter
         }
     }
 

@@ -11,9 +11,6 @@
  - TODO: chaining filters
  - TODO: camera modes (modifying capture device preview using transformative effects)
  - TODO: filter video in capture device
- - TODO: filter for export.
- - TODO: a filter should take a ciimage and return a ciimage, that lets you get around the empty input in the beginning.
- - TODO: export videos.
  */
 import UIKit
 
