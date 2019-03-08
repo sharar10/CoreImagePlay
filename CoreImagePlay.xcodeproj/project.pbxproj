@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		586AEDA42231DC2A00F6970C /* processing-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 586AEDA32231DC2A00F6970C /* processing-image.jpg */; };
+		586AEDA62232ECB500F6970C /* CroppedFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDA52232ECB400F6970C /* CroppedFilterTests.swift */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		586AEDA32231DC2A00F6970C /* processing-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "processing-image.jpg"; sourceTree = "<group>"; };
+		586AEDA52232ECB400F6970C /* CroppedFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppedFilterTests.swift; sourceTree = "<group>"; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */,
+				586AEDA52232ECB400F6970C /* CroppedFilterTests.swift */,
 				58DC2A6F2226F65B008DF52D /* Info.plist */,
 			);
 			path = CoreImagePlayTests;
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58DC2A6E2226F65B008DF52D /* CoreImagePlayTests.swift in Sources */,
+				586AEDA62232ECB500F6970C /* CroppedFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

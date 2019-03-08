@@ -12,12 +12,17 @@ import CoreImage
 protocol Filter {
     var filter: CIFilter? { get }
     func setInputImage(_ image: CIImage)
+    func setBackgroundImage(_ image: CIImage)
     var outputImage: CIImage? { get }
 }
 
 extension Filter {
     func setInputImage(_ image: CIImage) {
         filter?.setValue(image, forKey: kCIInputImageKey)
+    }
+
+    func setBackgroundImage(_ image: CIImage) {
+        filter?.setValue(image, forKey: kCIInputBackgroundImageKey)
     }
 
     var outputImage: CIImage? {
@@ -30,4 +35,5 @@ enum FilterNames: String, CaseIterable {
     case vignetteEffect = "CIVignetteEffect"
     case monochrome = "CIPhotoEffectNoir"
     case rgbAdjustment = "CIColorMatrix"
+    case crop = "CISourceOverCompositing"
 }
