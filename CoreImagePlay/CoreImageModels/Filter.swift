@@ -35,5 +35,5 @@ enum FilterNames: String, CaseIterable {
     case vignetteEffect = "CIVignetteEffect"
     case monochrome = "CIPhotoEffectNoir"
     case rgbAdjustment = "CIColorMatrix"
-    case crop = "CISourceOverCompositing"
+    case crop = "CICrop"
 }
