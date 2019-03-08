@@ -117,26 +117,6 @@ extension FilterSelectionViewController: UITableViewDelegate {
         case .originalVideo:
             playVideo()
         case .processedVideo:
-            if indexPath.row == 5 {
-                playVideo { (asset)  -> AVVideoComposition in
-                    return AVVideoComposition(asset: asset) { (filteringRequest) in
-                        let source = filteringRequest.sourceImage.clampedToExtent()
-
-                        //crop
-                        let filter = CIFilter(name: FilterNames.crop.rawValue)
-                        filter!.setValue(source, forKey: kCIInputImageKey)
-                        let vector = CIVector(x: 0, y: 100, z: 800, w: 720)
-                        filter!.setValue(vector, forKey: "inputRectangle")
-
-                        let blackBackground = filter!.outputImage!.applyingFilter("CISourceOverCompositing", parameters: ["inputBackgroundImage" : CroppedFilter.createBlackBackground(for: CGSize(width: 1280, height: 720))])
-
-                        let output = blackBackground.cropped(to: filteringRequest.sourceImage.extent)
-
-                        filteringRequest.finish(with: output, context: nil)
-                    }
-                }
-                return
-            }
             let filter = self.filter(for: indexPath)
             playVideo(withFilter: filter)
         case .originalImage:
@@ -177,7 +157,7 @@ extension FilterSelectionViewController {
         case .rgbAdjustment:
             return RGBAdjustmentFilter(red: 0.5, green: 0.2, blue: 1.0) as Filter
         case .cropped:
-            return RGBAdjustmentFilter(red: 0.1, green: 0.5, blue: 0.6) as Filter
+            return CroppedFilter() as Filter
         }
     }
 

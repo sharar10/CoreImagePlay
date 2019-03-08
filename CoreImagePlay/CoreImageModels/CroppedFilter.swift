@@ -10,10 +10,14 @@ import Foundation
 import CoreImage
 import UIKit
 
-// raw image -> crop -> overlay -> out
+// raw image -> CICrop -> CISourceOverCompositing with black background (cache it) -> out
 struct CroppedFilter: Filter {
     var filter: CIFilter?
     var secondFilter: CIFilter?
+
+    private var intermediaryOutputImage: CIImage? {
+        return filter?.outputImage
+    }
 
     var outputImage: CIImage? {
         return secondFilter?.outputImage
@@ -26,7 +30,7 @@ struct CroppedFilter: Filter {
         filter?.setValue(vector, forKey: "inputRectangle")
 
         secondFilter = CIFilter(name: "CISourceOverCompositing")
-        secondFilter?.setValue(filter?.outputImage, forKey: kCIInputImageKey)
+        secondFilter?.setValue(intermediaryOutputImage, forKey: kCIInputImageKey)
         secondFilter?.setValue(CroppedFilter.createBlackBackground(for: CGSize(width: 1280, height: 720)), forKey: "inputBackgroundImage")
     }
 
