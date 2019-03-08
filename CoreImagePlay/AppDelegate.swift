@@ -6,6 +6,14 @@
 //  Copyright © 2019 Sharar Arzuk Rahman. All rights reserved.
 //
 
+/**
+ Todos:
+ - TODO: chaining filters
+ - TODO: camera modes (modifying capture device preview using transformative effects)
+ - TODO: filter video in capture device
+ - TODO: filter for export.
+ - TODO: export videos.
+ */
 import UIKit
 
 @UIApplicationMain
@@ -40,7 +48,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

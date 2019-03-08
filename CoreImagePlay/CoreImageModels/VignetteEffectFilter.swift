@@ -1,5 +1,5 @@
 //
-//  CropFilter.swift
+//  VignetteFilter.swift
 //  CoreImagePlay
 //
 //  Created by Sharar Arzuk Rahman on 2/27/19.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import CoreImage
+
+//TODO: finish
+struct VignetteEffectFilter {
+    let filter: CIFilter?
+}

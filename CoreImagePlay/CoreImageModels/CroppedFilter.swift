@@ -1,5 +1,5 @@
 //
-//  GrayscaleFilter.swift
+//  CropFilter.swift
 //  CoreImagePlay
 //
 //  Created by Sharar Arzuk Rahman on 2/27/19.
@@ -9,10 +9,10 @@
 import Foundation
 import CoreImage
 
-struct GrayscaleFilter: Filter {
-    let filter: CIFilter?
+struct CroppedFilter: Filter {
+    var filter: CIFilter?
 
-    init() {
-        filter = CIFilter(name: FilterNames.monochrome.rawValue)
+    init(cropXPercent: CGFloat, y: CGFloat, widthPercent: CGFloat, heightPercent: CGFloat) {
+        
     }
 }
