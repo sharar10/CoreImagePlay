@@ -29,4 +29,5 @@ enum FilterNames: String, CaseIterable {
     case sepia = "CISepiaTone"
     case vignetteEffect = "CIVignetteEffect"
     case monochrome = "CIPhotoEffectNoir"
+    case rgbAdjustment = "CIColorMatrix"
 }
