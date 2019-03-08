@@ -32,6 +32,9 @@ class FilterSelectionViewController: UIViewController {
         case sepia = 0
         case grayscale
         case specAmatorka
+        case vignetteEffect
+        case rgbAdjustment
+        case cropped
 
         var name: String {
             switch self {
@@ -41,6 +44,12 @@ class FilterSelectionViewController: UIViewController {
                 return "Grayscale"
             case .specAmatorka:
                 return "SpecAmatorka"
+            case .vignetteEffect:
+                return "Vignette effect"
+            case .rgbAdjustment:
+                return "RGB Adjustment"
+            case .cropped:
+                return "Croppped"
             }
         }
     }
@@ -143,6 +152,14 @@ extension FilterSelectionViewController {
             return GrayscaleFilter() as Filter
         case .specAmatorka:
             return SpecAmatorkaFilter(imageName: "lookup_amatorka") as Filter
+        case .vignetteEffect:
+            return VignetteEffectFilter() as Filter
+        case .rgbAdjustment:
+            return RGBAdjustmentFilter(red: 0.5, green: 0.2, blue: 1.0) as Filter
+        case .cropped:
+            let size = CGSize(width: 1280, height: 720)
+            return CroppedFilter(imageSize: size, cropRelativeOrigin: (x: 0.2, y: 0.1), cropRelativeSize: (width: 0.8, height: 0.8))
+                as Filter
         }
     }
 

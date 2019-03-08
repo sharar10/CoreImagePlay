@@ -11,8 +11,6 @@
  - TODO: chaining filters
  - TODO: camera modes (modifying capture device preview using transformative effects)
  - TODO: filter video in capture device
- - TODO: filter for export.
- - TODO: export videos.
  */
 import UIKit
 
