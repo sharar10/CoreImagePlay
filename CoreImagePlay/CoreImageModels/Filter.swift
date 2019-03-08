@@ -22,7 +22,7 @@ extension Filter {
     }
 
     func setBackgroundImage(_ image: CIImage) {
-        filter?.setValue(image, forKey: kCIInputBackgroundImageKey)
+        filter?.setValue(image, forKey: "inputBackgroundImage")
     }
 
     var outputImage: CIImage? {
