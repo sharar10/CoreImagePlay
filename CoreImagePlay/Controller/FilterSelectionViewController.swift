@@ -32,6 +32,7 @@ class FilterSelectionViewController: UIViewController {
         case sepia = 0
         case grayscale
         case specAmatorka
+        case vignetteEffect
 
         var name: String {
             switch self {
@@ -41,6 +42,8 @@ class FilterSelectionViewController: UIViewController {
                 return "Grayscale"
             case .specAmatorka:
                 return "SpecAmatorka"
+            case .vignetteEffect:
+                return "Vignette effect"
             }
         }
     }
@@ -143,6 +146,8 @@ extension FilterSelectionViewController {
             return GrayscaleFilter() as Filter
         case .specAmatorka:
             return SpecAmatorkaFilter(imageName: "lookup_amatorka") as Filter
+        case .vignetteEffect:
+            return VignetteEffectFilter() as Filter
         }
     }
 
