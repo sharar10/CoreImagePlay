@@ -9,7 +9,7 @@
 import Foundation
 import CoreImage
 
-struct GrayscaleFilter: Filter {
+struct GrayscaleFilter: SimpleFilter {
     let filter: CIFilter?
 
     init() {
