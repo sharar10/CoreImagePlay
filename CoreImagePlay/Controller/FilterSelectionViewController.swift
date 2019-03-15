@@ -35,6 +35,7 @@ class FilterSelectionViewController: UIViewController {
         case vignetteEffect
         case rgbAdjustment
         case cropped
+        case rgbVignetteChain
 
         var name: String {
             switch self {
@@ -50,6 +51,8 @@ class FilterSelectionViewController: UIViewController {
                 return "RGB Adjustment"
             case .cropped:
                 return "Croppped"
+            case .rgbVignetteChain:
+                return "RGB + Vignette"
             }
         }
     }
@@ -118,14 +121,14 @@ extension FilterSelectionViewController: UITableViewDelegate {
             playVideo()
         case .processedVideo:
             let filter = self.filter(for: indexPath)
-            playVideo(withFilter: filter)
+            playVideo(withFilterChain: filter)
         case .originalImage:
             performSegue(withIdentifier: Segues.showImage.rawValue, sender: UIImage(named: "processing-image"))
         case .processedImage:
             let fileURL = Bundle.main.url(forResource: "processing-image", withExtension: "jpg")!
             let image = CIImage(contentsOf: fileURL)!
             let filter = self.filter(for: indexPath)
-            performSegue(withIdentifier: Segues.showImage.rawValue, sender: filterImage(with: image, filter: filter))
+            performSegue(withIdentifier: Segues.showImage.rawValue, sender: filterImage(with: image, filterChain: filter))
         }
     }
 
@@ -141,34 +144,48 @@ extension FilterSelectionViewController: UITableViewDelegate {
             return "Processed image"
         }
     }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 16
+    }
 }
 
 extension FilterSelectionViewController {
-    private func filter(for indexPath: IndexPath) -> Filter {
+    private func filter(for indexPath: IndexPath) -> FilterChain {
         switch ProcessedSectionRow(rawValue: indexPath.row)! {
         case .sepia:
-            return SepiaFilter(initialIntensity: 1.0) as Filter
+            let filter = SepiaFilter(initialIntensity: 1.0)
+            return FilterChain(fromFilters: [filter])
         case .grayscale:
-            return GrayscaleFilter() as Filter
+            let filter = GrayscaleFilter()
+            return FilterChain(fromFilters: [filter])
         case .specAmatorka:
-            return SpecAmatorkaFilter(imageName: "lookup_amatorka") as Filter
+            let filter = SpecAmatorkaFilter(imageName: "lookup_amatorka")
+            return FilterChain(fromFilters: [filter])
         case .vignetteEffect:
-            return VignetteEffectFilter() as Filter
+            let filter = VignetteEffectFilter()
+            return FilterChain(fromFilters: [filter])
         case .rgbAdjustment:
-            return RGBAdjustmentFilter(red: 0.5, green: 0.2, blue: 1.0) as Filter
+            let filter = RGBAdjustmentFilter(red: 0.5, green: 0.2, blue: 1.0)
+            return FilterChain(fromFilters: [filter])
         case .cropped:
             let size = CGSize(width: 1280, height: 720)
-            return CroppedFilter(imageSize: size, cropRelativeOrigin: (x: 0.2, y: 0.1), cropRelativeSize: (width: 0.8, height: 0.8))
-                as Filter
+            let filter = CroppedFilter(imageSize: size, cropRelativeOrigin: (x: 0.2, y: 0.1), cropRelativeSize: (width: 0.8, height: 0.8))
+            return FilterChain(fromFilters: [filter])
+        case .rgbVignetteChain:
+            let rgb = RGBAdjustmentFilter(red: 0.5, green: 0.7, blue: 0.3) as Filter
+            let vignette = VignetteEffectFilter() as Filter
+            return FilterChain(fromFilters: [rgb, vignette])
+
         }
     }
 
-    func filterImage(with image: CIImage, filter: Filter) -> UIImage {
-        filter.setInputImage(image)
-        return UIImage(ciImage: filter.outputImage!)
+    func filterImage(with image: CIImage, filterChain: FilterChain) -> UIImage {
+        filterChain.setInputImage(image)
+        return UIImage(ciImage: filterChain.outputImage!)
     }
 
-    private func playVideo(withFilter filter: Filter) {
+    private func playVideo(withFilterChain filter: FilterChain) {
         playVideo { (asset) -> AVVideoComposition in
             return AVVideoComposition(asset: asset) { (filteringRequest) in
                 let source = filteringRequest.sourceImage.clampedToExtent()

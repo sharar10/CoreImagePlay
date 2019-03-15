@@ -9,7 +9,7 @@
 import Foundation
 import CoreImage
 
-struct SepiaFilter: Filter {
+struct SepiaFilter: SimpleFilter {
     let filter: CIFilter?
 
     init(initialIntensity: NSNumber) {

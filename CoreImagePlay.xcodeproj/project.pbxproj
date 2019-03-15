@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		586AEDA42231DC2A00F6970C /* processing-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 586AEDA32231DC2A00F6970C /* processing-image.jpg */; };
-		586AEDA62232ECB500F6970C /* CroppedFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDA52232ECB400F6970C /* CroppedFilterTests.swift */; };
+		586AEDC1223C2D0B00F6970C /* FilterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC0223C2D0A00F6970C /* FilterNames.swift */; };
+		586AEDC4223C2E2200F6970C /* FilterNamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC3223C2E2200F6970C /* FilterNamesTests.swift */; };
+		586AEDC6223C304100F6970C /* FilterChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC5223C304100F6970C /* FilterChain.swift */; };
+		586AEDC9223C456D00F6970C /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC8223C456D00F6970C /* SimpleFilter.swift */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -38,7 +41,10 @@
 
 /* Begin PBXFileReference section */
 		586AEDA32231DC2A00F6970C /* processing-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "processing-image.jpg"; sourceTree = "<group>"; };
-		586AEDA52232ECB400F6970C /* CroppedFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroppedFilterTests.swift; sourceTree = "<group>"; };
+		586AEDC0223C2D0A00F6970C /* FilterNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNames.swift; sourceTree = "<group>"; };
+		586AEDC3223C2E2200F6970C /* FilterNamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNamesTests.swift; sourceTree = "<group>"; };
+		586AEDC5223C304100F6970C /* FilterChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChain.swift; sourceTree = "<group>"; };
+		586AEDC8223C456D00F6970C /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,19 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		586AEDC7223C3C8F00F6970C /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				58DC2A792226F74C008DF52D /* RGBAdjustmentFilter.swift */,
+				58DC2A832226FD56008DF52D /* GrayscaleFilter.swift */,
+				58DC2A852226FD65008DF52D /* CroppedFilter.swift */,
+				58DC2A872226FD71008DF52D /* SepiaFilter.swift */,
+				58DC2A892226FD7A008DF52D /* VignetteEffectFilter.swift */,
+				58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		58DC2A4C2226F65A008DF52D = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */,
-				586AEDA52232ECB400F6970C /* CroppedFilterTests.swift */,
+				586AEDC3223C2E2200F6970C /* FilterNamesTests.swift */,
 				58DC2A6F2226F65B008DF52D /* Info.plist */,
 			);
 			path = CoreImagePlayTests;
@@ -133,13 +152,11 @@
 		58DC2A782226F737008DF52D /* CoreImageModels */ = {
 			isa = PBXGroup;
 			children = (
-				58DC2A792226F74C008DF52D /* RGBAdjustmentFilter.swift */,
-				58DC2A832226FD56008DF52D /* GrayscaleFilter.swift */,
-				58DC2A852226FD65008DF52D /* CroppedFilter.swift */,
-				58DC2A872226FD71008DF52D /* SepiaFilter.swift */,
-				58DC2A892226FD7A008DF52D /* VignetteEffectFilter.swift */,
-				58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */,
+				586AEDC7223C3C8F00F6970C /* Filters */,
 				58DC2A8F22271858008DF52D /* Filter.swift */,
+				586AEDC8223C456D00F6970C /* SimpleFilter.swift */,
+				586AEDC5223C304100F6970C /* FilterChain.swift */,
+				586AEDC0223C2D0A00F6970C /* FilterNames.swift */,
 			);
 			path = CoreImageModels;
 			sourceTree = "<group>";
@@ -256,14 +273,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586AEDC9223C456D00F6970C /* SimpleFilter.swift in Sources */,
 				58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */,
 				58DC2A8E222702DD008DF52D /* FilterImagePreviewViewController.swift in Sources */,
 				58DC2A9022271858008DF52D /* Filter.swift in Sources */,
 				58DC2A862226FD65008DF52D /* CroppedFilter.swift in Sources */,
+				586AEDC1223C2D0B00F6970C /* FilterNames.swift in Sources */,
 				58DC2A8A2226FD7A008DF52D /* VignetteEffectFilter.swift in Sources */,
 				58DC2A882226FD71008DF52D /* SepiaFilter.swift in Sources */,
 				58DC2A7A2226F74C008DF52D /* RGBAdjustmentFilter.swift in Sources */,
 				58DC2A842226FD56008DF52D /* GrayscaleFilter.swift in Sources */,
+				586AEDC6223C304100F6970C /* FilterChain.swift in Sources */,
 				58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */,
 				58DC2A8C2226FD85008DF52D /* SpecAmatorkaFilter.swift in Sources */,
 			);
@@ -273,8 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586AEDC4223C2E2200F6970C /* FilterNamesTests.swift in Sources */,
 				58DC2A6E2226F65B008DF52D /* CoreImagePlayTests.swift in Sources */,
-				586AEDA62232ECB500F6970C /* CroppedFilterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import Foundation
 import CoreImage
 
-struct RGBAdjustmentFilter: Filter {
+struct RGBAdjustmentFilter: SimpleFilter {
     let filter: CIFilter?
 
     /// Color values are normalized to 1

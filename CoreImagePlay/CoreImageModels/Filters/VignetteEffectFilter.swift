@@ -9,7 +9,7 @@
 import Foundation
 import CoreImage
 
-struct VignetteEffectFilter: Filter {
+struct VignetteEffectFilter: SimpleFilter {
     let filter: CIFilter?
 
     /// image size is used to determine the center of the image, radiusDecimal is expressed as a decimal (min 0, max 1) from the center relative to the smaller size dimension.

@@ -10,8 +10,7 @@ import Foundation
 import CoreImage
 import UIKit
 
-// raw image -> CICrop -> CISourceOverCompositing with black background (cache it) -> out
-struct CroppedFilter: Filter {
+struct CroppedFilter: SimpleFilter {
     var filter: CIFilter?
     var secondFilter: CIFilter?
     private var imageSize: CGSize
@@ -46,18 +45,8 @@ struct CroppedFilter: Filter {
         let vector = CIVector(x: xRelative, y: yRelative, z: widthRelative, w: heightRelative)
         filter?.setValue(vector, forKey: "inputRectangle")
 
-        secondFilter = CIFilter(name: "CISourceOverCompositing")
-        secondFilter?.setValue(blackBackground, forKey: "inputBackgroundImage")
-    }
-
-    static func createBlackBackground(for size: CGSize) -> CIImage {
-        let renderer = UIGraphicsImageRenderer(size: size)
-        let image = renderer.image { (context) in
-            let aSize = context.format.bounds.size
-            UIColor.black.setFill()
-            context.fill(CGRect(x: 0, y: 0, width: aSize.width, height: aSize.height))
-        }
-        return CIImage(image: image)!
+        secondFilter = CIFilter(name: FilterNames.sourceOverCompositing.rawValue)
+        secondFilter?.setValue(blackBackground, forKey: kCIInputBackgroundImageKey)
     }
 }
 

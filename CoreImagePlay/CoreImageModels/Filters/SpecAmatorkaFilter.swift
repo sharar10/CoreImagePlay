@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreImage
 
-struct SpecAmatorkaFilter: Filter {
+struct SpecAmatorkaFilter: SimpleFilter {
     let filter: CIFilter?
 
     init(imageName: String) {
@@ -70,7 +70,7 @@ extension SpecAmatorkaFilter {
         let colorCubeData = NSData(bytesNoCopy: cubeData, length: size * size * size * 4 * floatSize, freeWhenDone: true)
 
         // create CIColorCube Filter
-        let filter = CIFilter(name: "CIColorCube")
+        let filter = CIFilter(name: FilterNames.colorCube.rawValue)
         filter?.setValue(colorCubeData, forKey: "inputCubeData")
         filter?.setValue(size, forKey: "inputCubeDimension")
 
