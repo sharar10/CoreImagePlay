@@ -36,6 +36,7 @@ class FilterSelectionViewController: UIViewController {
         case vignetteEffect
         case rgbAdjustment
         case cropped
+        case zoomBlur
         case rgbVignetteChain
 
         var name: String {
@@ -52,6 +53,8 @@ class FilterSelectionViewController: UIViewController {
                 return "RGB Adjustment"
             case .cropped:
                 return "Croppped"
+            case .zoomBlur:
+                return "Zoom blur"
             case .rgbVignetteChain:
                 return "RGB + Vignette"
             }
@@ -129,7 +132,7 @@ extension FilterSelectionViewController: UITableViewDelegate {
             let fileURL = Bundle.main.url(forResource: "processing-image", withExtension: "jpg")!
             let image = CIImage(contentsOf: fileURL)!
             let filter = self.filter(for: indexPath)
-            performSegue(withIdentifier: Segues.showImage.rawValue, sender: filterImage(with: image, filterChain: filter))
+            performSegue(withIdentifier: Segues.showImage.rawValue, sender: filterImage(with: image, filter: filter))
         }
     }
 
@@ -152,7 +155,7 @@ extension FilterSelectionViewController: UITableViewDelegate {
 }
 
 extension FilterSelectionViewController {
-    private func filter(for indexPath: IndexPath) -> FilterChain {
+    private func filter(for indexPath: IndexPath) -> Filter {
         switch ProcessedSectionRow(rawValue: indexPath.row)! {
         case .sepia:
             let filter = SepiaFilter(initialIntensity: 1.0)
@@ -173,6 +176,8 @@ extension FilterSelectionViewController {
             let size = CGSize(width: 1280, height: 720)
             let filter = CroppedFilter(imageSize: size, cropRelativeOrigin: (x: 0.2, y: 0.1), cropRelativeSize: (width: 0.8, height: 0.8))
             return FilterChain(fromFilters: [filter])
+        case .zoomBlur:
+            return ZoomBlurFilter()
         case .rgbVignetteChain:
             let rgb = RGBAdjustmentFilter(red: 0.5, green: 0.7, blue: 0.3) as Filter
             let vignette = VignetteEffectFilter() as Filter
@@ -181,12 +186,12 @@ extension FilterSelectionViewController {
         }
     }
 
-    func filterImage(with image: CIImage, filterChain: FilterChain) -> UIImage {
-        filterChain.setInputImage(image)
-        return UIImage(ciImage: filterChain.outputImage!)
+    func filterImage(with image: CIImage, filter: Filter) -> UIImage {
+        filter.setInputImage(image)
+        return UIImage(ciImage: filter.outputImage!)
     }
 
-    private func playVideo(withFilterChain filter: FilterChain) {
+    private func playVideo(withFilterChain filter: Filter) {
         playVideo { (asset) -> AVVideoComposition in
             return AVVideoComposition(asset: asset) { (filteringRequest) in
                 let source = filteringRequest.sourceImage.clampedToExtent()
