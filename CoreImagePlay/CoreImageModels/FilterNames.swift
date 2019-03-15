@@ -16,4 +16,5 @@ enum FilterNames: String, CaseIterable {
     case crop = "CICrop"
     case sourceOverCompositing = "CISourceOverCompositing"
     case colorCube = "CIColorCube"
+    case zoomBlur = "CIZoomBlur"
 }

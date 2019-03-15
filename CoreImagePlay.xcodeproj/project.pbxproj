@@ -13,6 +13,7 @@
 		586AEDC6223C304100F6970C /* FilterChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC5223C304100F6970C /* FilterChain.swift */; };
 		586AEDC9223C456D00F6970C /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC8223C456D00F6970C /* SimpleFilter.swift */; };
 		586AEDCB223C4B2100F6970C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 586AEDCA223C4B2100F6970C /* README.md */; };
+		586AEDCD223C58CA00F6970C /* ZoomBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDCC223C58CA00F6970C /* ZoomBlurFilter.swift */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		586AEDC5223C304100F6970C /* FilterChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChain.swift; sourceTree = "<group>"; };
 		586AEDC8223C456D00F6970C /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		586AEDCA223C4B2100F6970C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		586AEDCC223C58CA00F6970C /* ZoomBlurFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlurFilter.swift; sourceTree = "<group>"; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				58DC2A872226FD71008DF52D /* SepiaFilter.swift */,
 				58DC2A892226FD7A008DF52D /* VignetteEffectFilter.swift */,
 				58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */,
+				586AEDCC223C58CA00F6970C /* ZoomBlurFilter.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				586AEDC9223C456D00F6970C /* SimpleFilter.swift in Sources */,
 				58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */,
 				58DC2A8E222702DD008DF52D /* FilterImagePreviewViewController.swift in Sources */,
+				586AEDCD223C58CA00F6970C /* ZoomBlurFilter.swift in Sources */,
 				58DC2A9022271858008DF52D /* Filter.swift in Sources */,
 				58DC2A862226FD65008DF52D /* CroppedFilter.swift in Sources */,
 				586AEDC1223C2D0B00F6970C /* FilterNames.swift in Sources */,
