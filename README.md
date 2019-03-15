@@ -7,9 +7,8 @@ Playing around with CoreImage on iOS.
 * I am simply replicating some of the functionality that `GPUImage` offered using `CoreImage`, `AVFoundation` etc.
 
 ### To dos:
-* filter video in capture device
-* Video capture
-* Filter live video
-* Filter for export.
+* Filter video on live view from a capture device
+    * Add camera modes (juxtapose mirror-l, mirror-r, blur)
+* Capture video and save
+* Filter a video for export
 * Handle export
-* Camera modes (juxtapose mirror-l, mirror-r, blur)

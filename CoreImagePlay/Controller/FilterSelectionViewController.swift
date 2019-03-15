@@ -21,6 +21,7 @@ class FilterSelectionViewController: UIViewController {
     private enum Segues: String {
         case showImage
     }
+
     private enum Section: Int, CaseIterable {
         case originalVideo = 0
         case processedVideo
