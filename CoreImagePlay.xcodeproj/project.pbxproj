@@ -12,6 +12,7 @@
 		586AEDC4223C2E2200F6970C /* FilterNamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC3223C2E2200F6970C /* FilterNamesTests.swift */; };
 		586AEDC6223C304100F6970C /* FilterChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC5223C304100F6970C /* FilterChain.swift */; };
 		586AEDC9223C456D00F6970C /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC8223C456D00F6970C /* SimpleFilter.swift */; };
+		586AEDCB223C4B2100F6970C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 586AEDCA223C4B2100F6970C /* README.md */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		586AEDC3223C2E2200F6970C /* FilterNamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterNamesTests.swift; sourceTree = "<group>"; };
 		586AEDC5223C304100F6970C /* FilterChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChain.swift; sourceTree = "<group>"; };
 		586AEDC8223C456D00F6970C /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
+		586AEDCA223C4B2100F6970C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				58DC2A5F2226F65B008DF52D /* Assets.xcassets */,
 				58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */,
 				58DC2A642226F65B008DF52D /* Info.plist */,
+				586AEDCA223C4B2100F6970C /* README.md */,
 				58DC2A7E2226FB01008DF52D /* OtherAssets */,
 			);
 			path = CoreImagePlay;
@@ -251,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586AEDCB223C4B2100F6970C /* README.md in Resources */,
 				586AEDA42231DC2A00F6970C /* processing-image.jpg in Resources */,
 				58DC2A802226FB19008DF52D /* 720PVideo.mp4 in Resources */,
 				58DC2A632226F65B008DF52D /* LaunchScreen.storyboard in Resources */,

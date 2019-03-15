@@ -6,11 +6,6 @@
 //  Copyright © 2019 Sharar Arzuk Rahman. All rights reserved.
 //
 
-/**
- Todos:
- - TODO: camera modes (modifying capture device preview using transformative effects)
- - TODO: filter video in capture device
- */
 import UIKit
 
 @UIApplicationMain
