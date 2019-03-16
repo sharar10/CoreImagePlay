@@ -14,6 +14,8 @@
 		586AEDC9223C456D00F6970C /* SimpleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDC8223C456D00F6970C /* SimpleFilter.swift */; };
 		586AEDCB223C4B2100F6970C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 586AEDCA223C4B2100F6970C /* README.md */; };
 		586AEDCD223C58CA00F6970C /* ZoomBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDCC223C58CA00F6970C /* ZoomBlurFilter.swift */; };
+		586AEDD8223C8F6D00F6970C /* HalfMirrorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */; };
+		586AEDDA223C94A800F6970C /* MirrorTransform.metal in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDD9223C94A800F6970C /* MirrorTransform.metal */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		586AEDC8223C456D00F6970C /* SimpleFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleFilter.swift; sourceTree = "<group>"; };
 		586AEDCA223C4B2100F6970C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		586AEDCC223C58CA00F6970C /* ZoomBlurFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomBlurFilter.swift; sourceTree = "<group>"; };
+		586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfMirrorFilter.swift; sourceTree = "<group>"; };
+		586AEDD9223C94A800F6970C /* MirrorTransform.metal */ = {isa = PBXFileReference; explicitFileType = sourcecode.metal; path = MirrorTransform.metal; sourceTree = "<group>"; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 				58DC2A892226FD7A008DF52D /* VignetteEffectFilter.swift */,
 				58DC2A8B2226FD85008DF52D /* SpecAmatorkaFilter.swift */,
 				586AEDCC223C58CA00F6970C /* ZoomBlurFilter.swift */,
+				586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */,
+				586AEDD9223C94A800F6970C /* MirrorTransform.metal */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -286,12 +292,14 @@
 				586AEDCD223C58CA00F6970C /* ZoomBlurFilter.swift in Sources */,
 				58DC2A9022271858008DF52D /* Filter.swift in Sources */,
 				58DC2A862226FD65008DF52D /* CroppedFilter.swift in Sources */,
+				586AEDD8223C8F6D00F6970C /* HalfMirrorFilter.swift in Sources */,
 				586AEDC1223C2D0B00F6970C /* FilterNames.swift in Sources */,
 				58DC2A8A2226FD7A008DF52D /* VignetteEffectFilter.swift in Sources */,
 				58DC2A882226FD71008DF52D /* SepiaFilter.swift in Sources */,
 				58DC2A7A2226F74C008DF52D /* RGBAdjustmentFilter.swift in Sources */,
 				58DC2A842226FD56008DF52D /* GrayscaleFilter.swift in Sources */,
 				586AEDC6223C304100F6970C /* FilterChain.swift in Sources */,
+				586AEDDA223C94A800F6970C /* MirrorTransform.metal in Sources */,
 				58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */,
 				58DC2A8C2226FD85008DF52D /* SpecAmatorkaFilter.swift in Sources */,
 			);
@@ -463,6 +471,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharar.CoreImagePlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -481,6 +491,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharar.CoreImagePlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
