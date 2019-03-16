@@ -38,6 +38,7 @@ class FilterSelectionViewController: UIViewController {
         case cropped
         case zoomBlur
         case rgbVignetteChain
+        case halfMirror
 
         var name: String {
             switch self {
@@ -57,6 +58,8 @@ class FilterSelectionViewController: UIViewController {
                 return "Zoom blur"
             case .rgbVignetteChain:
                 return "RGB + Vignette"
+            case .halfMirror:
+                return "Half Mirror"
             }
         }
     }
@@ -69,6 +72,9 @@ class FilterSelectionViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        // TODO: temp
+        let indexPath = IndexPath(row: 8, section: 1)
+        tableView(filtersTableView, didSelectRowAt: indexPath)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -182,7 +188,8 @@ extension FilterSelectionViewController {
             let rgb = RGBAdjustmentFilter(red: 0.5, green: 0.7, blue: 0.3) as Filter
             let vignette = VignetteEffectFilter() as Filter
             return FilterChain(fromFilters: [rgb, vignette])
-
+        case .halfMirror:
+            return HalfMirrorFilter()
         }
     }
 
@@ -194,7 +201,8 @@ extension FilterSelectionViewController {
     private func playVideo(withFilterChain filter: Filter) {
         playVideo { (asset) -> AVVideoComposition in
             return AVVideoComposition(asset: asset) { (filteringRequest) in
-                let source = filteringRequest.sourceImage.clampedToExtent()
+                //TODO: clamp to extent stuff
+                let source = filteringRequest.sourceImage
                 filter.setInputImage(source)
                 let output = filter.outputImage!.cropped(to: filteringRequest.sourceImage.extent)
 
