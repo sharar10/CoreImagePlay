@@ -8,7 +8,6 @@ Playing around with CoreImage on iOS.
 
 ### To dos:
 * Filter video on live view from a capture device
-    * Add camera modes (mirror-l, mirror-r, blur)
 * Capture video and save
 * Filter a video for export
 * Handle export
