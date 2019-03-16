@@ -72,9 +72,6 @@ class FilterSelectionViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // TODO: temp
-        let indexPath = IndexPath(row: 8, section: 1)
-        tableView(filtersTableView, didSelectRowAt: indexPath)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -201,7 +198,6 @@ extension FilterSelectionViewController {
     private func playVideo(withFilterChain filter: Filter) {
         playVideo { (asset) -> AVVideoComposition in
             return AVVideoComposition(asset: asset) { (filteringRequest) in
-                //TODO: clamp to extent stuff
                 let source = filteringRequest.sourceImage
                 filter.setInputImage(source)
                 let output = filter.outputImage!.cropped(to: filteringRequest.sourceImage.extent)
