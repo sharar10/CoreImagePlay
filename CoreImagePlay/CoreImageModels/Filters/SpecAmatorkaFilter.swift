@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import CoreImage
 
+// TODO: migrate to Metal.
 struct SpecAmatorkaFilter: SimpleFilter {
     let filter: CIFilter?
 
@@ -47,17 +48,17 @@ extension SpecAmatorkaFilter {
                 for _ in 0 ..< columnCount {
                     for x in 0 ..< size {
 
-                        let alpha   = Float(bitmap[bitmapOffset]) / 255.0
-                        let red     = Float(bitmap[bitmapOffset+1]) / 255.0
-                        let green   = Float(bitmap[bitmapOffset+2]) / 255.0
-                        let blue    = Float(bitmap[bitmapOffset+3]) / 255.0
+                        let red   = Float(bitmap[bitmapOffset]) / 255.0
+                        let green     = Float(bitmap[bitmapOffset+1]) / 255.0
+                        let blue   = Float(bitmap[bitmapOffset+2]) / 255.0
+                        let alpha    = Float(bitmap[bitmapOffset+3]) / 255.0
 
                         let dataOffset = (z * size * size + y * size + x) * 4
 
-                        cubeData[dataOffset + 3] = alpha
-                        cubeData[dataOffset + 2] = red
+                        cubeData[dataOffset + 0] = red
                         cubeData[dataOffset + 1] = green
-                        cubeData[dataOffset + 0] = blue
+                        cubeData[dataOffset + 2] = blue
+                        cubeData[dataOffset + 3] = alpha
                         bitmapOffset += 4
                     }
                     z += 1
@@ -88,7 +89,7 @@ extension SpecAmatorkaFilter {
             let bytesPerRow = width * 4
             let totalBytes = height * bytesPerRow
 
-            let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue | CGBitmapInfo.byteOrder32Little.rawValue
+            let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
             let colorSpace = CGColorSpaceCreateDeviceRGB()
             var intensities = [UInt8](repeating: 0, count: totalBytes)
 
