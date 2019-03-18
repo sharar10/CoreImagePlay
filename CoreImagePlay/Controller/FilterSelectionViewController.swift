@@ -20,17 +20,19 @@ class FilterSelectionViewController: UIViewController {
     // MARK: nested types
     private enum Segues: String {
         case showImage
+        case showCamera
     }
 
     private enum Section: Int, CaseIterable {
-        case originalVideo = 0
+        case camera
+        case originalVideo
         case processedVideo
         case originalImage
         case processedImage
     }
 
     private enum ProcessedSectionRow: Int, CaseIterable {
-        case sepia = 0
+        case sepia
         case grayscale
         case specAmatorka
         case vignetteEffect
@@ -82,6 +84,8 @@ class FilterSelectionViewController: UIViewController {
         case .showImage:
             let destination = segue.destination as! FilterImagePreviewViewController
             destination.image = sender as? UIImage
+        case .showCamera:
+            return
         }
     }
 }
@@ -94,6 +98,8 @@ extension FilterSelectionViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch Section(rawValue: section)! {
+        case .camera:
+            return 1
         case .originalVideo:
             return 1
         case .processedVideo:
@@ -110,6 +116,8 @@ extension FilterSelectionViewController: UITableViewDataSource {
             return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
         }
         switch Section(rawValue: indexPath.section)! {
+        case .camera:
+            cell.textLabel?.text = "Camera"
         case .originalVideo:
             cell.textLabel?.text = "Original video"
         case .processedVideo:
@@ -127,6 +135,8 @@ extension FilterSelectionViewController: UITableViewDataSource {
 extension FilterSelectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch Section(rawValue: indexPath.section)! {
+        case .camera:
+            performSegue(withIdentifier: Segues.showCamera.rawValue, sender: nil)
         case .originalVideo:
             playVideo()
         case .processedVideo:
@@ -144,6 +154,8 @@ extension FilterSelectionViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch Section(rawValue: section)! {
+        case .camera:
+            return "Camera"
         case .originalVideo:
             return "Unprocessed video"
         case .processedVideo:

@@ -17,6 +17,8 @@
 		586AEDD8223C8F6D00F6970C /* HalfMirrorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */; };
 		586AEDDC223F1E6800F6970C /* filters.metal in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDDB223F1E6800F6970C /* filters.metal */; };
 		586AEDDE223F227F00F6970C /* SpecAmatorkaAltFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDDD223F227F00F6970C /* SpecAmatorkaAltFilter.swift */; };
+		586AEDE02240438500F6970C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDDF2240438500F6970C /* CameraViewController.swift */; };
+		586AEDE322404B3A00F6970C /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDE222404B3A00F6970C /* VideoPreviewView.swift */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfMirrorFilter.swift; sourceTree = "<group>"; };
 		586AEDDB223F1E6800F6970C /* filters.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = filters.metal; sourceTree = "<group>"; };
 		586AEDDD223F227F00F6970C /* SpecAmatorkaAltFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecAmatorkaAltFilter.swift; sourceTree = "<group>"; };
+		586AEDDF2240438500F6970C /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		586AEDE222404B3A00F6970C /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			children = (
 				58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */,
 				58DC2A8D222702DD008DF52D /* FilterImagePreviewViewController.swift */,
+				586AEDDF2240438500F6970C /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -118,6 +123,14 @@
 				586AEDDB223F1E6800F6970C /* filters.metal */,
 			);
 			path = Filters;
+			sourceTree = "<group>";
+		};
+		586AEDE122404B1E00F6970C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				586AEDE222404B3A00F6970C /* VideoPreviewView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		58DC2A4C2226F65A008DF52D = {
@@ -144,6 +157,7 @@
 				58DC2A782226F737008DF52D /* CoreImageModels */,
 				58DC2A582226F65A008DF52D /* AppDelegate.swift */,
 				586AEDA22231C58000F6970C /* Controller */,
+				586AEDE122404B1E00F6970C /* View */,
 				58DC2A5C2226F65A008DF52D /* Main.storyboard */,
 				58DC2A5F2226F65B008DF52D /* Assets.xcassets */,
 				58DC2A612226F65B008DF52D /* LaunchScreen.storyboard */,
@@ -296,6 +310,7 @@
 				58DC2A9022271858008DF52D /* Filter.swift in Sources */,
 				58DC2A862226FD65008DF52D /* CroppedFilter.swift in Sources */,
 				586AEDD8223C8F6D00F6970C /* HalfMirrorFilter.swift in Sources */,
+				586AEDE322404B3A00F6970C /* VideoPreviewView.swift in Sources */,
 				586AEDC1223C2D0B00F6970C /* FilterNames.swift in Sources */,
 				586AEDDE223F227F00F6970C /* SpecAmatorkaAltFilter.swift in Sources */,
 				58DC2A8A2226FD7A008DF52D /* VignetteEffectFilter.swift in Sources */,
@@ -306,6 +321,7 @@
 				586AEDC6223C304100F6970C /* FilterChain.swift in Sources */,
 				58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */,
 				58DC2A8C2226FD85008DF52D /* SpecAmatorkaFilter.swift in Sources */,
+				586AEDE02240438500F6970C /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
