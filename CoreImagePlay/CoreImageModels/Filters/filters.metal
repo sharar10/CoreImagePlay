@@ -38,5 +38,24 @@ extern "C" {
             float4 newColor = mix(newColor1, newColor2, fract(blueColor));
             return mix(textureColor, float4(newColor.rgb, textureColor.w), 1);
         }
+
+        /// Helper function that gets the coordinate to sample from.
+        float2 get_coord(float midX, sampler src, destination dest) {
+            float distFromMidX = dest.coord().x - midX;
+            float2 sampleCoord = src.transform(dest.coord() - float2(2 * distFromMidX, 0));
+            return sampleCoord;
+        }
+
+        /// Metal shader language function to be used in a `CIKernel`.
+        float4 horizontal_mirror_transform(sampler src, float lToR, destination dest) {
+
+            float midX = src.extent().z / 2;
+
+            if ((lToR == 1 && dest.coord().x > midX) || (lToR == -1 && dest.coord().x < midX)) {
+                return src.sample(get_coord(midX, src, dest));
+            } else {
+                return src.sample(src.coord());
+            }
+        }
     }
 }

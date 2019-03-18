@@ -48,7 +48,7 @@ class FilterSelectionViewController: UIViewController {
             case .grayscale:
                 return "Grayscale"
             case .specAmatorka:
-                return "SpecAmatorka"
+                return "Lookup filter"
             case .vignetteEffect:
                 return "Vignette effect"
             case .rgbAdjustment:
@@ -62,7 +62,7 @@ class FilterSelectionViewController: UIViewController {
             case .halfMirror:
                 return "Half Mirror"
             case .specAmatorkaAlt:
-                return "SpecAmatorka - Metal"
+                return "Lookup filter - Metal"
             }
         }
     }
@@ -197,7 +197,7 @@ extension FilterSelectionViewController {
 
     func filterImage(with image: CIImage, filter: Filter) -> UIImage {
         filter.setInputImage(image)
-        return UIImage(ciImage: filter.outputImage!)
+        return UIImage(ciImage: filter.outputImage!.cropped(to: image.extent))
     }
 
     private func playVideo(withFilterChain filter: Filter) {

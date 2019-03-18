@@ -15,7 +15,7 @@ struct SpecAmatorkaFilterAlt: Filter {
     private let filter: LookupFilter?
 
     func setInputImage(_ image: CIImage) {
-        filter?.inputImage = image
+        filter?.inputImage = image.clampedToExtent()
     }
 
     var outputImage: CIImage? {
