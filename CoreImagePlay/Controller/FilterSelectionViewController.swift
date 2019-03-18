@@ -39,6 +39,7 @@ class FilterSelectionViewController: UIViewController {
         case zoomBlur
         case rgbVignetteChain
         case halfMirror
+        case specAmatorkaAlt
 
         var name: String {
             switch self {
@@ -60,6 +61,8 @@ class FilterSelectionViewController: UIViewController {
                 return "RGB + Vignette"
             case .halfMirror:
                 return "Half Mirror"
+            case .specAmatorkaAlt:
+                return "SpecAmatorka - Metal"
             }
         }
     }
@@ -187,6 +190,8 @@ extension FilterSelectionViewController {
             return FilterChain(fromFilters: [rgb, vignette])
         case .halfMirror:
             return HalfMirrorFilter()
+        case .specAmatorkaAlt:
+            return SpecAmatorkaFilterAlt(imageName: "lookup_amatorka")
         }
     }
 
