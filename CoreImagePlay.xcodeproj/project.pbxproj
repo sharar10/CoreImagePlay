@@ -17,6 +17,9 @@
 		586AEDD8223C8F6D00F6970C /* HalfMirrorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */; };
 		586AEDDC223F1E6800F6970C /* filters.metal in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDDB223F1E6800F6970C /* filters.metal */; };
 		586AEDDE223F227F00F6970C /* SpecAmatorkaAltFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDDD223F227F00F6970C /* SpecAmatorkaAltFilter.swift */; };
+		586AEDE722404F5A00F6970C /* RGBAdjustmentFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDE622404F5A00F6970C /* RGBAdjustmentFilterTests.swift */; };
+		586AEDE92240513400F6970C /* GrayscaleFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDE82240513400F6970C /* GrayscaleFilterTests.swift */; };
+		586AEDEB2240519E00F6970C /* SepiaFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586AEDEA2240519D00F6970C /* SepiaFilterTests.swift */; };
 		58DC2A592226F65A008DF52D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A582226F65A008DF52D /* AppDelegate.swift */; };
 		58DC2A5B2226F65A008DF52D /* FilterSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */; };
 		58DC2A5E2226F65A008DF52D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58DC2A5C2226F65A008DF52D /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		586AEDD7223C8F6D00F6970C /* HalfMirrorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfMirrorFilter.swift; sourceTree = "<group>"; };
 		586AEDDB223F1E6800F6970C /* filters.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = filters.metal; sourceTree = "<group>"; };
 		586AEDDD223F227F00F6970C /* SpecAmatorkaAltFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecAmatorkaAltFilter.swift; sourceTree = "<group>"; };
+		586AEDE622404F5A00F6970C /* RGBAdjustmentFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAdjustmentFilterTests.swift; sourceTree = "<group>"; };
+		586AEDE82240513400F6970C /* GrayscaleFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscaleFilterTests.swift; sourceTree = "<group>"; };
+		586AEDEA2240519D00F6970C /* SepiaFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepiaFilterTests.swift; sourceTree = "<group>"; };
 		58DC2A552226F65A008DF52D /* CoreImagePlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImagePlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DC2A582226F65A008DF52D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58DC2A5A2226F65A008DF52D /* FilterSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				58DC2A6D2226F65B008DF52D /* CoreImagePlayTests.swift */,
+				586AEDE622404F5A00F6970C /* RGBAdjustmentFilterTests.swift */,
+				586AEDE82240513400F6970C /* GrayscaleFilterTests.swift */,
+				586AEDEA2240519D00F6970C /* SepiaFilterTests.swift */,
 				586AEDC3223C2E2200F6970C /* FilterNamesTests.swift */,
 				58DC2A6F2226F65B008DF52D /* Info.plist */,
 			);
@@ -313,7 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				586AEDEB2240519E00F6970C /* SepiaFilterTests.swift in Sources */,
 				586AEDC4223C2E2200F6970C /* FilterNamesTests.swift in Sources */,
+				586AEDE92240513400F6970C /* GrayscaleFilterTests.swift in Sources */,
+				586AEDE722404F5A00F6970C /* RGBAdjustmentFilterTests.swift in Sources */,
 				58DC2A6E2226F65B008DF52D /* CoreImagePlayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

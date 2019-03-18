@@ -10,6 +10,7 @@ import Foundation
 import CoreImage
 import UIKit
 
+// TODO: test
 struct CroppedFilter: SimpleFilter {
     var filter: CIFilter?
     var secondFilter: CIFilter?
